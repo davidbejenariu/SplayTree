@@ -4,7 +4,7 @@
 using namespace std;
 
 /**
- * main function for testing class methods such as insertion, deletion, find, predecessor, succesor and
+ * main function for testing class methods such as insertion, deletion, find, predecessor, successor and
  * inorder traversal
  *
  * @return

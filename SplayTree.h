@@ -50,7 +50,7 @@ public:
 
     /// insert
 
-    void insert(const T key) {
+    void insert(const T &key) {
         if (!findNode(key)) {
             auto *newNode = new Node<T>(key);
             Node<T> *current = m_root;
@@ -86,7 +86,7 @@ public:
 
     /// erase
 
-    void erase(T key) { // top-down deletion
+    void erase(const T &key) { // top-down deletion
         if (m_root) {
             Node<T> *found = findNode(key);
 
@@ -120,7 +120,7 @@ public:
 
     /// successor and predecessor
 
-    T successor(T key) {
+    T successor(const T &key) {
         Node<T> *found = findNode(key);
 
         if (found) {
@@ -130,7 +130,7 @@ public:
         return -1;
     }
 
-    T predecessor(T key) {
+    T predecessor(const T &key) {
         Node<T> *found = findNode(key);
 
         if (found) {
@@ -245,7 +245,7 @@ private:
 
     /// find
 
-    Node<T> *findNode(T key) {
+    Node<T> *findNode(const T &key) {
         Node<T> *current = m_root;
         Node<T> *ant = nullptr;
 

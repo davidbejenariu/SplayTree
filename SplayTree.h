@@ -166,7 +166,6 @@ private:
 
     void rotateRight(Node<T> *node) {
         Node<T> *child = node->m_left;
-
         node->m_left = child->m_right;
 
         if (node->m_left) {
@@ -189,7 +188,6 @@ private:
 
     void rotateLeft(Node<T> *node) {
         Node<T> *child = node->m_right;
-
         node->m_right = child->m_left;
 
         if (node->m_right) {
